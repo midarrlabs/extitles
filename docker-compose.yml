@@ -1,0 +1,6 @@
+services:
+
+  extitles:
+    container_name: extitles
+    build: .
+    tty: true
