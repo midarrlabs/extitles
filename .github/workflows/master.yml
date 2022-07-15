@@ -1,0 +1,19 @@
+name: Master
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Up services
+        run: docker compose up -d
+
+      - name: Run tests
+        run: docker run --network=extitles_default --env MIX_ENV=test extitles_extitles:latest mix test
