@@ -7,7 +7,11 @@ defmodule Extitles.MixProject do
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: description(),
+      package: package(),
+      deps: deps(),
+      name: "Extitles",
+      source_url: "https://github.com/midarrlabs/extitles"
     ]
   end
 
@@ -18,6 +22,19 @@ defmodule Extitles.MixProject do
   end
 
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
+    ]
+  end
+
+  defp description() do
+    "Subtitles in pure Elixir."
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/midarrlabs/extitles"}
+    ]
   end
 end
