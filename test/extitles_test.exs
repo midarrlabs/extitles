@@ -2,10 +2,6 @@ defmodule ExtitlesTest do
   use ExUnit.Case
   doctest Extitles
 
-  test "greets the world" do
-    assert Extitles.hello() == :world
-  end
-
   @srt_path "test/fixtures/example.srt"
   @srt_read "1\n00:05:00,400 --> 00:05:15,300\nThis is an example of\na subtitle.\n\n2\n00:05:16,400 --> 00:05:25,300\nThis is an example of\na subtitle - 2nd subtitle."
 

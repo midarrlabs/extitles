@@ -3,19 +3,6 @@ defmodule Extitles do
   Documentation for `Extitles`.
   """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Extitles.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
-
   defp make_cue([_, timing | lines]) do
     [from, to] = timing |> String.split(" --> ")
 
