@@ -11,7 +11,8 @@ defmodule Extitles.MixProject do
       package: package(),
       deps: deps(),
       name: "Extitles",
-      source_url: "https://github.com/midarrlabs/extitles"
+      source_url: "https://github.com/midarrlabs/extitles",
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
