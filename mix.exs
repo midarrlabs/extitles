@@ -23,7 +23,8 @@ defmodule Extitles.MixProject do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 
