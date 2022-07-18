@@ -18,6 +18,9 @@ jobs:
       - name: Run tests
         run: docker run --network=extitles_default --env MIX_ENV=test extitles_extitles:latest mix test
 
+      - name: Run coverage
+        run: docker run --network=extitles_default --env GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} --env CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} --env MIX_ENV=test extitles_extitles:latest /bin/bash /app/code-coverage.sh
+
   release:
     needs: test
     name: Release
