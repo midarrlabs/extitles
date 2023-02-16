@@ -26,3 +26,4 @@ extitles-*.tar
 /tmp/
 
 .idea
+*.iml
